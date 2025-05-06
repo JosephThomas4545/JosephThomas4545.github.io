@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Summer Youth Camp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1>Summer Youth Camp</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <h2>Welcome to Watchman Catholic Charismatic Renewal Youth Camp 2025!</h2>
+    <p>"It's a time of great spiritual refreshing. Thank you for you're interest and God bless you".</p>
+    <a href="#register" class="btn">Register Now</a>
+    <a
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fwccrmyouths%2F&psig=AOvVaw2x9C9d2aOHDdSSpfiIE3mA&ust=1746578184800000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjN-vPMjY0DFQAAAAAdAAAAABAE"
+    </a>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About the Camp</h2>
+    <p>Join us for a transformative experience at the Summer Youth Camp, hosted by the Watchman Catholic Charismatic Renewal Movement (WCCRM).</p>
+    <p>Our camp is designed to provide a safe and nurturing environment for youth to grow in their faith, build friendships, and develop leadership skills.</p>
+    <p>The camp aims to give children of all ages, from elementary school to college, a chance to get closer to God. Youths and children will receive small-group teaching based on their age range. All those seeking a connection with God are welcome. .</p>
+    <p>We will have a variety of activities, including worship sessions, workshops, games, and outdoor adventures. Our dedicated team of leaders and volunteers are committed to making this camp a memorable and impactful experience for all participants.</p>
+    <p>Topic: "Godly youth in a godless world"</p>
+    <p>We look forward to seeing you at the camp!</p>
+</section>
+
+  <!-- Registration Section -->
+  <section id="register" class="section">
+    <h2>Register for Camp</h2>
+    <form id="campForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="section">
+    <h2>Camp Schedule & Location</h2>
+    <p>July 6th - July 10th, Morning Prayer 8:00am, <a href = "https://highlandretreat.org/" Highland Retreat Center, 14783 Upp. </a> </p>
+    
+    </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Include church contact info, a message form, or social links.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Summer Youth Camp | WCCRM</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('campForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('formMessage');
+
+      if (name && email) {
+        message.textContent = `Thank you for registering, ${name}! We'll follow up soon.`;
+        message.style.color = "green";
+        this.reset();
+      } else {
+        message.textContent = "Please fill in all fields.";
+        message.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
